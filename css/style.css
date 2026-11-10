@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --marrom: #3c1a0d;
+    --creme: #f5e3c8;
+    --laranja: #c85a1a;
+    --laranja-escuro: #a34412;
+    --branco: #ffffff;
+    --texto: #2a140c;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section[id] {
+    scroll-margin-top: 80px;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: var(--creme);
+    color: var(--texto);
+    line-height: 1.5;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.marca-reg {
+    display: inline-block;
+    background-color: var(--laranja);
+    color: var(--branco);
+    padding: 12px 22px;
+    border: none;
+    font-family: inherit;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.marca-reg:hover {
+    background-color: var(--laranja-escuro);
+}
+
+.marca-reg-clara {
+    background-color: var(--branco);
+    color: var(--texto);
+    border: 1px solid #e8d5b8;
+}
+
+.marca-reg-clara:hover {
+    background-color: #efe0c6;
+}
+
+.cabecalho {
+    background-color: var(--marrom);
+    color: var(--creme);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.cabecalho h1 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.cabecalho ul {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.cabecalho a {
+    color: var(--creme);
+}
+
+.cabecalho a:hover {
+    color: var(--laranja);
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 8%;
+}
+
+.banner-conteudo {
+    width: 50%;
+}
+
+.banner-conteudo p:first-of-type {
+    letter-spacing: 0.04em;
+    font-size: 0.9rem;
+}
+
+.banner-conteudo h1 {
+    font-size: 38px;
+    font-weight: 400;
+    margin: 10px 0;
+    line-height: 1.15;
+}
+
+.banner-conteudo p {
+    margin-bottom: 20px;
+}
+
+.banner-imagem {
+    width: 50%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.banner-imagem img {
+    height: 280px;
+}
+
+.sobre {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 40px;
+    padding: 50px 8%;
+    border-top: 2px solid var(--marrom);
+}
+
+.sobre-conteudo {
+    width: 50%;
+}
+
+.sobre figure {
+    width: 50%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.sobre figure img {
+    height: 320px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.sobre h2 {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.sobre p {
+    margin-bottom: 20px;
+}
+
+.cafes {
+    padding: 40px 8%;
+    border-top: 2px solid var(--marrom);
+}
+
+.sessao-cabecalho {
+    margin-bottom: 25px;
+}
+
+.sessao-cabecalho h2 {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.lista-marca {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+}
+
+.img-cartao {
+    height: 100%;
+    padding: 16px;
+    background-color: var(--branco);
+    border: 1px solid #ead8bc;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(43, 23, 13, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.img-cartao img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.img-cartao h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin: 14px 0 6px;
+}
+
+.img-cartao p {
+    margin-bottom: 10px;
+}
+
+.img-cartao strong {
+    color: var(--laranja);
+}
+
+.img-cartao:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(43, 23, 13, 0.12);
+}
+
+.ambiente {
+    background-color: var(--marrom);
+    color: var(--branco);
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 50px 8%;
+}
+
+.imagem-ambiente {
+    width: 50%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.imagem-ambiente img {
+    height: 260px;
+}
+
+.ambiente-conteudo {
+    width: 50%;
+}
+
+.ambiente-conteudo h2 {
+    font-size: 30px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.ambiente-conteudo p {
+    margin-bottom: 20px;
+}
+
+.contato {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 50px 8%;
+}
+
+.contato-cabecalho {
+    width: 50%;
+}
+
+.contato-cabecalho h2 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.contato form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contato label {
+    font-size: 0.95rem;
+}
+
+.contato input,
+.contato textarea,
+.contato button {
+    padding: 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid var(--marrom);
+    border-radius: 6px;
+    background-color: var(--branco);
+}
+
+.contato textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.contato button {
+    background-color: var(--laranja);
+    color: var(--branco);
+    border: none;
+    width: fit-content;
+    margin-top: 6px;
+}
+
+footer {
+    background-color: var(--marrom);
+    color: var(--creme);
+    padding: 40px 8%;
+}
+
+footer > p:first-of-type {
+    color: var(--laranja);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+footer a {
+    color: var(--creme);
+}
+
+footer a:hover {
+    color: var(--laranja);
+}
+
+footer > p:last-of-type {
+    margin-top: 24px;
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 800px) {
+    .cabecalho,
+    .banner,
+    .sobre,
+    .ambiente,
+    .contato {
+        flex-direction: column;
+    }
+
+    .cabecalho ul {
+        justify-content: center;
+        gap: 16px;
+        text-align: center;
+    }
+
+    .banner-conteudo,
+    .banner-imagem,
+    .sobre-conteudo,
+    .sobre figure,
+    .imagem-ambiente,
+    .ambiente-conteudo,
+    .contato-cabecalho,
+    .contato form {
+        width: 100%;
+    }
+
+    .sobre {
+        flex-direction: column;
+    }
+
+    footer ul,
+    footer > p:last-of-type {
+        justify-content: flex-start;
+        text-align: left;
+    }
+}
